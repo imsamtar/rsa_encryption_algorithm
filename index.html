@@ -6,9 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RSA Encryption</title>
     <script src="//peterolson.github.com/BigInteger.js/BigInteger.min.js"></script>
-    <script src="index.js"></script>
 </head>
 <body>
-    
+    <form>
+        <textarea id="msg" cols="50" rows="10" placeholder="Message">Hello</textarea>
+        <textarea id="cypher" cols="50" rows="10" placeholder="Encrypted Message"></textarea>
+        <textarea id="publickey" cols="50" rows="10" placeholder="Public Key"></textarea>
+        <input id="encrypt" type="button" value="Encrypt Now">
+    </form>
+
+    <form>
+        <textarea id="cypher2" cols="50" rows="10" placeholder="Encrypted Message"></textarea>
+        <textarea id="msg2" cols="50" rows="10" placeholder="Message"></textarea>
+        <textarea id="privatekey" cols="50" rows="10" placeholder="Private Key"></textarea>
+        <input id="decrypt" type="button" value="Decrypt Now">
+    </form>
+
+    <script async src="index.js"></script>
 </body>
 </html>
