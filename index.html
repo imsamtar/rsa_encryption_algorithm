@@ -5,23 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RSA Encryption</title>
-    <script src="//peterolson.github.com/BigInteger.js/BigInteger.min.js"></script>
+    <link rel="stylesheet" href="bulma/css/bulma.min.css">
+    <script src="script/BigInteger.min.js"></script>
 </head>
-<body>
-    <form>
-        <textarea id="msg" cols="50" rows="10" placeholder="Message">Hello</textarea>
-        <textarea id="cypher" cols="50" rows="10" placeholder="Encrypted Message"></textarea>
-        <textarea id="publickey" cols="50" rows="10" placeholder="Public Key"></textarea>
-        <input id="encrypt" type="button" value="Encrypt Now">
-    </form>
+<body class="section container">
+    <div class="has-text-primary">
+        <label class="label">Message:</label>
+        <input class="input" id="msg" placeholder="Message" value="Hello, World!💁👌🎍😍"></input>
 
-    <form>
-        <textarea id="cypher2" cols="50" rows="10" placeholder="Encrypted Message"></textarea>
-        <textarea id="msg2" cols="50" rows="10" placeholder="Message"></textarea>
-        <textarea id="privatekey" cols="50" rows="10" placeholder="Private Key"></textarea>
-        <input id="decrypt" type="button" value="Decrypt Now">
-    </form>
+        <label class="label">Public Key:</label>
+        <input class="input" id="publickey" cols="50" rows="10" placeholder="Public Key"></input>
+        
+        <label class="label">Encrypted Message:</label>
+        <input class="input" id="cypher" cols="50" rows="10" placeholder="Encrypted Message"></input>
 
-    <script async src="index.js"></script>
+        <label class="label">Private Key:</label>
+        <input class="input" id="privatekey" cols="50" rows="10" placeholder="Private Key"></input>
+
+        <label class="label">Decrypted Message:</label>
+        <input class="input" id="msg2" cols="50" rows="10" placeholder="Message"></input>
+
+        <input id="encrypt" class="button is-primary is-fullwidth" style="margin-top: 10px;" type="button" value="Test">
+    </div>
+    <script async type="module" src="main/index.js"></script>
 </body>
 </html>
